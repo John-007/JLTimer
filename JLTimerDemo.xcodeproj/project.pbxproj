@@ -21,6 +21,7 @@
 		52709C2D26CA45D8007E9B6D /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2C26CA45D8007E9B6D /* NewViewController.m */; };
 		52709C3026CA572B007E9B6D /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2F26CA572B007E9B6D /* ClockView.m */; };
 		52709C3326CA60B6007E9B6D /* ClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C3226CA60B6007E9B6D /* ClockModel.m */; };
+		527226E526E5BE0300A0B5F6 /* JLTaskLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		52709C2F26CA572B007E9B6D /* ClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
 		52709C3126CA60B6007E9B6D /* ClockModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockModel.h; sourceTree = "<group>"; };
 		52709C3226CA60B6007E9B6D /* ClockModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockModel.m; sourceTree = "<group>"; };
+		527226E326E5BE0300A0B5F6 /* JLTaskLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTaskLinkList.h; sourceTree = "<group>"; };
+		527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTaskLinkList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				52709C2826CA11C6007E9B6D /* JLTimer.m */,
 				52709C2726CA11C6007E9B6D /* JLTimerModel.h */,
 				52709C2526CA11C6007E9B6D /* JLTimerModel.m */,
+				527226E326E5BE0300A0B5F6 /* JLTaskLinkList.h */,
+				527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			files = (
 				52709C3326CA60B6007E9B6D /* ClockModel.m in Sources */,
 				52709C2D26CA45D8007E9B6D /* NewViewController.m in Sources */,
+				527226E526E5BE0300A0B5F6 /* JLTaskLinkList.m in Sources */,
 				52709BF726CA11B1007E9B6D /* ViewController.m in Sources */,
 				52709BF126CA11B1007E9B6D /* AppDelegate.m in Sources */,
 				52709C2926CA11C6007E9B6D /* JLTimerModel.m in Sources */,

@@ -24,8 +24,10 @@ typedef enum : NSUInteger {
 
 @interface JLTimer : NSObject
 
-+ (instancetype)shared;
+@property (nonatomic,strong) NSMutableArray *runningTypeArray;
 
++ (instancetype)shared;
+- (void)fire;
 
 /**
  * 开始计时方法

@@ -38,6 +38,10 @@
 
     __weak typeof(self) weakSelf = self;
     [[JLTimer shared] addNewTaskWithTime:1 isRepeat:true type:model.type handleBlock:^{
+        
+        weakSelf.timeLabel.text = [NSString stringWithFormat:@"%d",weakSelf.startNum];
+        weakSelf.startNum--;
+        
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (strongSelf) {
             strongSelf.timeLabel.text = [NSString stringWithFormat:@"%d",strongSelf.startNum];

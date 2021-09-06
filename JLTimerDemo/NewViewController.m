@@ -7,6 +7,8 @@
 
 #import "NewViewController.h"
 #import "JLTimer.h"
+#import "ClockView.h"
+#import "ClockModel.h"
 
 
 
@@ -22,11 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    CGPoint viewCenter = self.view.center;
     self.timeCount = 10;
     self.view.backgroundColor = [UIColor yellowColor];
     
     [self.view addSubview:self.numberLabel];
-    self.numberLabel.center = self.view.center;
+    self.numberLabel.center = viewCenter;
     
     __weak typeof(self) weakSelf = self;
     //创建计时器，间隔3s，type命名为JLTimerType_ViewController
@@ -45,6 +48,33 @@
     [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(didTouchBackBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backBtn];
+    
+    
+    
+    ClockView *clockA = [[ClockView alloc] initWithFrame:CGRectMake(0, 0, 250, 60)];
+    [self.view addSubview:clockA];
+    ClockModel *modelA = [[ClockModel alloc] init];
+    modelA.startNum = 15;
+    modelA.type = JLTimerType_ClockA;
+//    clockA.model = modelA;
+    clockA.center = CGPointMake(viewCenter.x, viewCenter.y + 70);
+    
+    ClockView *clockB = [[ClockView alloc] initWithFrame:CGRectMake(0, 0, 250, 60)];
+    [self.view addSubview:clockB];
+    ClockModel *modelB = [[ClockModel alloc] init];
+    modelB.startNum = 15;
+    modelB.type = JLTimerType_ClockB;
+//    clockB.model = modelB;
+    clockB.center = CGPointMake(viewCenter.x, viewCenter.y + 160);
+    
+    ClockView *clockC = [[ClockView alloc] initWithFrame:CGRectMake(0, 0, 250, 60)];
+    [self.view addSubview:clockC];
+    ClockModel *modelC = [[ClockModel alloc] init];
+    modelC.startNum = 15;
+    modelC.type = JLTimerType_ClockC;
+//    clockC.model = modelC;
+    clockC.center = CGPointMake(viewCenter.x, viewCenter.y + 250);
+    
 }
 
 - (void)didTouchBackBtn{
