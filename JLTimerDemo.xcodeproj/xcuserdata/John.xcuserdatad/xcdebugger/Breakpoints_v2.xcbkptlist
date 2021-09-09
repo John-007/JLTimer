@@ -3,4 +3,70 @@
    uuid = "1C564FBF-AFD2-4F82-8B8C-45E33A995115"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8A1A510-DCC7-4543-A4D8-D10E6A779C2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JLTimerDemo/Module/ShoppingCart/ShoppingCartVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8A1A510-DCC7-4543-A4D8-D10E6A779C2F - a40378308c688fc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ShoppingCartVC tableView:didSelectRowAtIndexPath:]"
+                  moduleName = "JLTimerDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/John/Documents/MyGitee/JLTimerDemo/JLTimerDemo/Module/ShoppingCart/ShoppingCartVC.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "A8A1A510-DCC7-4543-A4D8-D10E6A779C2F - 2983bc7a512bf7d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[ShoppingCartVC tableView:didSelectRowAtIndexPath:]_block_invoke"
+                  moduleName = "JLTimerDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/John/Documents/MyGitee/JLTimerDemo/JLTimerDemo/Module/ShoppingCart/ShoppingCartVC.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60E17F25-E8EC-4236-B107-8BD7D4F5F9FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JLTimerDemo/JLTimer/JLTimer.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-addCountDownTaskWithTime:handleBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

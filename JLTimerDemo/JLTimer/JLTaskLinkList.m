@@ -42,9 +42,14 @@
     JLTaskNode *currentNode = self.headNode;
     JLTaskNode *lastNode = [[JLTaskNode alloc] init];
     
+    int i = 0;
+    
     while (isContinue) {
         
         if (node.serialID < currentNode.serialID){
+            if (i == 0) {
+                self.headNode = node;
+            }
             node.next = currentNode;
             lastNode.next = node;
             
@@ -54,11 +59,18 @@
             
             isContinue = false;
         }else if (node.serialID > currentNode.serialID){
+            if (currentNode.next == nil) {
+                currentNode.next = node;
+                isContinue = false;
+            }
             lastNode = currentNode;
             currentNode = currentNode.next;
         }
         
+        
+        i++;
     }
+//    NSLog(@"当前链表有%d个节点",i);
     
 }
 

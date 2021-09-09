@@ -14,11 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 //此处添加自定义的timerType，用于停止指定的timer
 typedef enum : NSUInteger {
-    JLTimerType_ViewController,
+    JLTimerType_CountDown = -2,
+    JLTimerType_Once = -1,
+    JLTimerType_ViewController = 0,
+    JLTimerType_ShoppingCart,
     JLTimerType_NewViewController,
-    JLTimerType_ClockA,
-    JLTimerType_ClockB,
-    JLTimerType_ClockC,
+    JLTimerType_ShoppingCartA,
+    JLTimerType_ShoppingCartB,
+    JLTimerType_ShoppingCartC,
 } JLTimerType;
 
 
@@ -27,7 +30,6 @@ typedef enum : NSUInteger {
 @property (nonatomic,strong) NSMutableArray *runningTypeArray;
 
 + (instancetype)shared;
-- (void)fire;
 
 /**
  * 开始计时方法
@@ -44,11 +46,16 @@ typedef enum : NSUInteger {
 - (void)addNewTaskWithOnceTime:(NSInteger)timeNum
                    handleBlock:(void (^)(void))handle;
 
+//新增倒计时事件
+- (void (^)(void))addCountDownTaskWithTime:(NSInteger)timeNum
+                     handleBlock:(void (^)(void))handle;
+
 
 //终止全部时间
 - (void)stopTimer;
 //终止指定type
 - (void)stopTimerWithType:(JLTimerType)type;
+
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;

@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isRepeat;
 @property (nonatomic,assign) NSInteger timeCount;
 @property (nonatomic,assign) JLTimerType type;
-@property (nonatomic,assign) BOOL shutDown;
+//倒计时属性，统计还剩下几次
+@property (nonatomic,assign) NSInteger countDown;
 //流水ID
 @property (nonatomic,assign) NSInteger serialID;
 

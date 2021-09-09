@@ -6,8 +6,8 @@
 //
 
 #import "ViewController.h"
-#import "NewViewController.h"
 #import "JLTimer.h"
+#import "ShoppingCartVC.h"
 
 @interface ViewController ()
 
@@ -24,28 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
 
     
-//    [[JLTimer shared] addNewTaskWithOnceTime:5 handleBlock:^{
-//        NSLog(@"Debug -- JLTimerType_ViewController 仅执行一次");
-//    }];
-    int64_t delayInSeconds = 3.0;      // 延迟的时间
-    /*
-     *@parameter 1,时间参照，从此刻开始计时
-     *@parameter 2,延时多久，此处为秒级，还有纳秒等。10ull * NSEC_PER_MSEC
-     */
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        //5s后回调，仅执行一次，并自动销毁
-        NSLog(@"Debug -- JLTimerType_ViewController 开始");
-        
-        [[JLTimer shared] addNewTaskWithTime:5 isRepeat:false type:JLTimerType_ViewController handleBlock:^{
-            NSLog(@"Debug -- JLTimerType_ViewController 仅执行一次");
-        }];
-        
-        NSLog(@"Debug -- NormalTimer 开始");
-        NSTimer *normalTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:NO];
-    });
+    NSLog(@"Debug -- JLTimerType_ViewController 开始");
+    [[JLTimer shared] addNewTaskWithOnceTime:1 handleBlock:^{
+        NSLog(@"Debug -- JLTimerType_ViewController 仅执行一次");
+    }];
+    
+    
+    NSLog(@"Debug -- NormalTimer 开始");
+    NSTimer *normalTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:NO];
 
    
 
@@ -77,17 +66,17 @@
 
 - (void)didTouchPresentBtn{
     
-    NewViewController *newVC = [[NewViewController alloc] init];
-    newVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
-    [self presentViewController:newVC animated:true completion:^{
-        
-    }];
+    ShoppingCartVC *newVC = [[ShoppingCartVC alloc] init];
+    [self.navigationController pushViewController:newVC animated:true];
+    
+//    NewViewController *newVC = [[NewViewController alloc] init];
+//    [self.navigationController pushViewController:newVC animated:true];
     
 }
 
 - (void)didTouchStopTimeBtn{
     
-    [[JLTimer shared] stopTimerWithType:JLTimerType_NewViewController];
+    [[JLTimer shared] stopTimerWithType:JLTimerType_ShoppingCart];
     
 }
 

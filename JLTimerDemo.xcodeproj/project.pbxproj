@@ -18,10 +18,12 @@
 		52709C1726CA11B2007E9B6D /* JLTimerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C1626CA11B2007E9B6D /* JLTimerDemoUITests.m */; };
 		52709C2926CA11C6007E9B6D /* JLTimerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2526CA11C6007E9B6D /* JLTimerModel.m */; };
 		52709C2A26CA11C6007E9B6D /* JLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2826CA11C6007E9B6D /* JLTimer.m */; };
-		52709C2D26CA45D8007E9B6D /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2C26CA45D8007E9B6D /* NewViewController.m */; };
 		52709C3026CA572B007E9B6D /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2F26CA572B007E9B6D /* ClockView.m */; };
 		52709C3326CA60B6007E9B6D /* ClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C3226CA60B6007E9B6D /* ClockModel.m */; };
 		527226E526E5BE0300A0B5F6 /* JLTaskLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */; };
+		527226EB26E748A100A0B5F6 /* ShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226EA26E748A100A0B5F6 /* ShoppingCartVC.m */; };
+		527226EF26E74A8000A0B5F6 /* ShoppingCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226EE26E74A8000A0B5F6 /* ShoppingCartTableViewCell.m */; };
+		527226F526E76D0E00A0B5F6 /* ShoppingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226F426E76D0E00A0B5F6 /* ShoppingVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,14 +66,18 @@
 		52709C2626CA11C6007E9B6D /* JLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTimer.h; sourceTree = "<group>"; };
 		52709C2726CA11C6007E9B6D /* JLTimerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTimerModel.h; sourceTree = "<group>"; };
 		52709C2826CA11C6007E9B6D /* JLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTimer.m; sourceTree = "<group>"; };
-		52709C2B26CA45D8007E9B6D /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
-		52709C2C26CA45D8007E9B6D /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		52709C2E26CA572B007E9B6D /* ClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
 		52709C2F26CA572B007E9B6D /* ClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
 		52709C3126CA60B6007E9B6D /* ClockModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockModel.h; sourceTree = "<group>"; };
 		52709C3226CA60B6007E9B6D /* ClockModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockModel.m; sourceTree = "<group>"; };
 		527226E326E5BE0300A0B5F6 /* JLTaskLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTaskLinkList.h; sourceTree = "<group>"; };
 		527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTaskLinkList.m; sourceTree = "<group>"; };
+		527226E926E748A100A0B5F6 /* ShoppingCartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartVC.h; sourceTree = "<group>"; };
+		527226EA26E748A100A0B5F6 /* ShoppingCartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartVC.m; sourceTree = "<group>"; };
+		527226ED26E74A8000A0B5F6 /* ShoppingCartTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartTableViewCell.h; sourceTree = "<group>"; };
+		527226EE26E74A8000A0B5F6 /* ShoppingCartTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTableViewCell.m; sourceTree = "<group>"; };
+		527226F326E76D0E00A0B5F6 /* ShoppingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingVC.h; sourceTree = "<group>"; };
+		527226F426E76D0E00A0B5F6 /* ShoppingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,15 +128,11 @@
 		52709BEE26CA11B1007E9B6D /* JLTimerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				52709C2426CA11C6007E9B6D /* Tools */,
-				52709BEF26CA11B1007E9B6D /* AppDelegate.h */,
-				52709BF026CA11B1007E9B6D /* AppDelegate.m */,
-				52709BF226CA11B1007E9B6D /* SceneDelegate.h */,
-				52709BF326CA11B1007E9B6D /* SceneDelegate.m */,
+				527226E626E7062600A0B5F6 /* Main */,
+				52709C2426CA11C6007E9B6D /* JLTimer */,
 				52709BF526CA11B1007E9B6D /* ViewController.h */,
 				52709BF626CA11B1007E9B6D /* ViewController.m */,
-				52709C2B26CA45D8007E9B6D /* NewViewController.h */,
-				52709C2C26CA45D8007E9B6D /* NewViewController.m */,
+				527226E726E7482900A0B5F6 /* Module */,
 				52709C2E26CA572B007E9B6D /* ClockView.h */,
 				52709C2F26CA572B007E9B6D /* ClockView.m */,
 				52709C3126CA60B6007E9B6D /* ClockModel.h */,
@@ -162,7 +164,7 @@
 			path = JLTimerDemoUITests;
 			sourceTree = "<group>";
 		};
-		52709C2426CA11C6007E9B6D /* Tools */ = {
+		52709C2426CA11C6007E9B6D /* JLTimer */ = {
 			isa = PBXGroup;
 			children = (
 				52709C2626CA11C6007E9B6D /* JLTimer.h */,
@@ -172,7 +174,47 @@
 				527226E326E5BE0300A0B5F6 /* JLTaskLinkList.h */,
 				527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */,
 			);
-			path = Tools;
+			path = JLTimer;
+			sourceTree = "<group>";
+		};
+		527226E626E7062600A0B5F6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				52709BEF26CA11B1007E9B6D /* AppDelegate.h */,
+				52709BF026CA11B1007E9B6D /* AppDelegate.m */,
+				52709BF226CA11B1007E9B6D /* SceneDelegate.h */,
+				52709BF326CA11B1007E9B6D /* SceneDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		527226E726E7482900A0B5F6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				527226E826E7485400A0B5F6 /* ShoppingCart */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		527226E826E7485400A0B5F6 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				527226E926E748A100A0B5F6 /* ShoppingCartVC.h */,
+				527226EA26E748A100A0B5F6 /* ShoppingCartVC.m */,
+				527226F326E76D0E00A0B5F6 /* ShoppingVC.h */,
+				527226F426E76D0E00A0B5F6 /* ShoppingVC.m */,
+				527226EC26E7492C00A0B5F6 /* View */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		527226EC26E7492C00A0B5F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				527226ED26E74A8000A0B5F6 /* ShoppingCartTableViewCell.h */,
+				527226EE26E74A8000A0B5F6 /* ShoppingCartTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,11 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				52709C3326CA60B6007E9B6D /* ClockModel.m in Sources */,
-				52709C2D26CA45D8007E9B6D /* NewViewController.m in Sources */,
 				527226E526E5BE0300A0B5F6 /* JLTaskLinkList.m in Sources */,
+				527226EB26E748A100A0B5F6 /* ShoppingCartVC.m in Sources */,
 				52709BF726CA11B1007E9B6D /* ViewController.m in Sources */,
+				527226F526E76D0E00A0B5F6 /* ShoppingVC.m in Sources */,
 				52709BF126CA11B1007E9B6D /* AppDelegate.m in Sources */,
 				52709C2926CA11C6007E9B6D /* JLTimerModel.m in Sources */,
+				527226EF26E74A8000A0B5F6 /* ShoppingCartTableViewCell.m in Sources */,
 				52709C0226CA11B2007E9B6D /* main.m in Sources */,
 				52709C3026CA572B007E9B6D /* ClockView.m in Sources */,
 				52709BF426CA11B1007E9B6D /* SceneDelegate.m in Sources */,
@@ -485,6 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZVR57WU37;
 				INFOPLIST_FILE = JLTimerDemo/Info.plist;
@@ -492,8 +537,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.JLTimerDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.23.JLTimerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -503,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PZVR57WU37;
 				INFOPLIST_FILE = JLTimerDemo/Info.plist;
@@ -510,8 +557,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.JLTimerDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.23.JLTimerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
