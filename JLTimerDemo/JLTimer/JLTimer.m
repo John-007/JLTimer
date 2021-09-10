@@ -13,19 +13,18 @@
 
 @interface JLTimer()
 
-@property (nonatomic,assign) NSInteger serialID;                //流水ID
-@property (nonatomic,strong) NSTimer *timer;                    //唯一timer
-@property (nonatomic,strong) NSMutableArray *shouldStopTimerIDArray;     //需要停止的计时数组
-
-//总链表
-@property (nonatomic,strong) JLTaskLinkList *linkList;
+@property (nonatomic,assign) NSInteger            serialID;                   //流水ID
+@property (nonatomic,strong) NSTimer             *timer;                      //唯一运行的timer
+@property (nonatomic,strong) NSMutableArray      *shouldStopTimerIDArray;     //需要停止的timer数组
+@property (nonatomic,strong) NSMutableDictionary *newObserverDict;            //存放监听者的字典
+@property (nonatomic,strong) JLTaskLinkList      *linkList;                   //总链表
+@property (nonatomic,strong) NSMutableDictionary *timerGroupDict;             //存放timer组的字典
 
 //用于时间找平
-@property (nonatomic,assign) NSInteger startTime;
-@property (nonatomic,assign) NSInteger realStartTime;
+@property (nonatomic,assign) NSInteger            startTime;
+@property (nonatomic,assign) NSInteger            realStartTime;
 
 
-@property (nonatomic,strong) NSMutableDictionary *newObserverDict;
 
 @end
 
@@ -59,8 +58,8 @@
 
 //新增计时事件
 - (NSString*)addNewTaskWithTime:(NSInteger)timeNum
-                  isRepeat:(BOOL)isRepeat
-               handleBlock:(void (^)(void))handle {
+                       isRepeat:(BOOL)isRepeat
+                    handleBlock:(void (^)(void))handle {
     
     [self dealWithTimer];
 
@@ -72,14 +71,35 @@
     return [self getTimerID:handle];
 }
 
+//新增计时事件，带有组管理
+- (NSString*)addNewTaskWithTime:(NSInteger)timeNum
+                          group:(JLTimerGroup)group
+                       isRepeat:(BOOL)isRepeat
+                    handleBlock:(void (^)(void))handle {
+    
+    
+    NSMutableArray *contentArr = [NSMutableArray array];
+    
+    NSNumber *num = [self getGroupNumber:group];
+    if ([self.timerGroupDict.allKeys containsObject:num]){
+        contentArr = self.timerGroupDict[num];
+    }
+    //加入对应ID的监听数组
+    [contentArr addObject:[self getTimerID:handle]];
+    
+    return [self addNewTaskWithTime:timeNum isRepeat:isRepeat handleBlock:handle];
+    
+}
+
+
 //新增一次性计时事件
 - (NSString*)addNewTaskWithOnceTime:(NSInteger)timeNum
-                   handleBlock:(void (^)(void))handle {
+                        handleBlock:(void (^)(void))handle {
 
 
     [self dealWithTimer];
 
-    JLTimerModel *model = [[JLTimerModel alloc] initWithTimerNum:timeNum isRepeat:false type:JLTimerType_Once handleBlock:handle];
+    JLTimerModel *model = [[JLTimerModel alloc] initWithTimerNum:timeNum isRepeat:false type:JLTimerType_Default handleBlock:handle];
 
     //添加进链表
     [self addToNodeList:model withSerialID:self.serialID];
@@ -89,7 +109,7 @@
 
 //新增倒计时事件
 - (NSString*)addCountDownTaskWithTime:(NSInteger)timeNum
-                     handleBlock:(void (^)(void))handle {
+                          handleBlock:(void (^)(void))handle {
     
     [self dealWithTimer];
     
@@ -114,6 +134,16 @@
 }
 
 
+//终止指定Group下的所有timer
+- (void)stopTimerWithGroup:(JLTimerGroup)group{
+    
+    NSNumber *num = [self getGroupNumber:group];
+    for (NSString* timerID in self.timerGroupDict[num]) {
+        [self stopTimerWithID:timerID];
+    }
+}
+
+
 //终止所有时间
 - (void)stopTimer{
     
@@ -125,6 +155,10 @@
     
     NSLog(@"计时器销毁");
 }
+
+
+
+
 
 //新增监听timer
 - (void)addNewObserver:(void (^)(void))newBlock with:(NSString *)timerID{
@@ -252,6 +286,7 @@
                     
                     
                 }else{
+                    
                     //不需要重复，清空指定timer的监听
                     [self removeTimerObserverFor:timerID];
                 }
@@ -279,6 +314,11 @@
     return [NSString stringWithFormat:@"%@",handle];
 }
 
+- (NSNumber*)getGroupNumber:(JLTimerGroup)group{
+    
+    return [NSNumber numberWithInteger:group];
+}
+
 
 - (NSMutableArray *)shouldStopTimerIDArray{
     if (!_shouldStopTimerIDArray) {
@@ -299,6 +339,13 @@
         _newObserverDict = [NSMutableDictionary dictionary];
     }
     return _newObserverDict;
+}
+
+- (NSMutableDictionary *)timerGroupDict{
+    if (!_timerGroupDict) {
+        _timerGroupDict = [NSMutableDictionary dictionary];
+    }
+    return _timerGroupDict;
 }
 
 @end

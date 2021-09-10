@@ -22,26 +22,9 @@
 
     
     [[JLTimer shared] addNewObserver:^{
-            NSLog(@"123");
+        NSLog(@"123");
     } with:self.timerID];
 }
 
-//- (void (^)(void))eventBlock{
-//    if (!_eventBlock) {
-//        _eventBlock = ^{
-//            NSLog(@"123");
-//        };
-//    }
-//    return _eventBlock;
-//}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

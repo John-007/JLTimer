@@ -12,6 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    JLTimerType_Default,
+    JLTimerType_CountDown
+} JLTimerType;
+
+
 @interface JLTimerModel : NSObject
 
 @property (nonatomic,assign) BOOL isRepeat;

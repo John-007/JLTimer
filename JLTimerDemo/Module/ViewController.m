@@ -77,7 +77,7 @@
 
 - (void)didTouchStopTimeBtn{
     
-    [[JLTimer shared] stopTimerWithType:JLTimerType_ShoppingCart];
+//    [[JLTimer shared] stopTimerWithType:JLTimerType_ShoppingCart];
     
 }
 
