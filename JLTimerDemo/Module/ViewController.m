@@ -69,10 +69,7 @@
     
     ShoppingCartVC *newVC = [[ShoppingCartVC alloc] init];
     [self.navigationController pushViewController:newVC animated:true];
-    
-//    NewViewController *newVC = [[NewViewController alloc] init];
-//    [self.navigationController pushViewController:newVC animated:true];
-    
+
 }
 
 - (void)didTouchStopTimeBtn{
