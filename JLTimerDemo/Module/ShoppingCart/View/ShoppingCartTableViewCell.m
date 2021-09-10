@@ -49,18 +49,6 @@
     }];
     NSLog(@"uuid -- %@",self.timerID);
     
-    
-    [[JLTimer shared] addNewTaskWithOnceTime:5 handleBlock:^{
-            
-    }];
-    
-    NSString *timerID =
-    [[JLTimer shared] addNewTaskWithTime:1 isRepeat:true handleBlock:^{
-            
-    }];
-    
-    [[JLTimer shared] stopTimerWithID:timerID];
-    
 //   self.normalTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:true];
 }
 

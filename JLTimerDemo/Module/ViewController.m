@@ -27,19 +27,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     
-//    NSLog(@"Debug -- JLTimerType_ViewController 开始");
-//
-//    [[JLTimer shared] addNewTaskWithOnceTime:1 handleBlock:^{
-//        NSLog(@"Debug -- JLTimerType_ViewController 仅执行一次");
-//    }];
-//    NSTimer *normalTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:NO];
-//
-//    NSLog(@"Debug -- NormalTimer 开始");
-    
-
-   
-
-    
     UIButton *presentBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 60)];
     [presentBtn setBackgroundColor:[UIColor lightGrayColor]];
     [presentBtn setTitle:@"点击跳转下一页" forState:UIControlStateNormal];
@@ -58,11 +45,6 @@
     stopTimeBtn.center = CGPointMake(self.view.center.x, self.view.center.y + 100);
     
 }
-
-- (void)runNormalTimer{
-    NSLog(@"Debug -- NormalTimer 仅执行一次");
-}
-
 
 
 - (void)didTouchPresentBtn{

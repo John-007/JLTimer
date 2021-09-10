@@ -17,15 +17,12 @@ typedef enum : NSUInteger {
 
 @interface JLTimerModel : NSObject
 
-@property (nonatomic,assign) BOOL isRepeat;
-@property (nonatomic,assign) NSInteger timeCount;
-@property (nonatomic,assign) JLTimerType type;
-//倒计时属性，统计还剩下几次
-@property (nonatomic,assign) NSInteger countDown;
-//流水ID
-@property (nonatomic,assign) NSInteger serialID;
-//要执行的动作
-@property (nonatomic,copy) void(^eventBlock)(void);
+@property (nonatomic,assign) BOOL           isRepeat;
+@property (nonatomic,assign) NSInteger      timeCount;
+@property (nonatomic,assign) JLTimerType    type;
+@property (nonatomic,assign) NSInteger      countDown;  //倒计时属性，统计还剩下几次
+@property (nonatomic,assign) NSInteger      serialID;   //流水ID
+@property (nonatomic,  copy) void(^eventBlock)(void);   //要执行的动作
 
 - (instancetype)initWithTimerNum:(NSUInteger)time isRepeat:(BOOL)isRepeat type:(JLTimerType)type handleBlock:(void(^)(void))handle;
 
@@ -35,9 +32,9 @@ typedef enum : NSUInteger {
 
 @interface JLTaskNode : NSObject
 
-@property (nonatomic, assign) NSInteger serialID;
-@property (nonatomic, strong) NSMutableArray *taskArr;
-@property (nonatomic, strong) JLTaskNode *next;
+@property (nonatomic, assign) NSInteger         serialID;
+@property (nonatomic, strong) NSMutableArray    *taskArr;
+@property (nonatomic, strong) JLTaskNode        *next;
 
 - (instancetype)initNodeWith:(JLTimerModel*)model andSerialID:(NSInteger)serialID;
 

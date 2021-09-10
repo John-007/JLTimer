@@ -116,8 +116,6 @@
     model.countDown = timeNum;
     //添加进链表
     [self addToNodeList:model withSerialID:self.serialID];
-    
-    NSLog(@"addCountDownTaskWithTime -- 传入前 %@ -- 传入后 %@",handle,model.eventBlock);
 
     return [self getTimerID:model.eventBlock];
 }

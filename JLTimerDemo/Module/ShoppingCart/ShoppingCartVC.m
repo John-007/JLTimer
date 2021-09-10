@@ -37,7 +37,6 @@
     
     
     self.dataArr = @[@8,@18,@28,@22,@16,@8,@18,@28,@22,@16];
-//    self.dataArr = @[@8];
     [self.tabV reloadData];
     
 
