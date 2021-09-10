@@ -37,7 +37,7 @@
 ```
 
 
-3.常规创建一个计时器，附带停止方法。
+3.创建一个常规计时器，附带停止方法。
 
 ```
 NSString *timerID = [[JLTimer shared] addNewTaskWithTime:1 isRepeat:true handleBlock:^{
