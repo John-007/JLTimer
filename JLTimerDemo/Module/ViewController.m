@@ -27,14 +27,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     
-    NSLog(@"Debug -- JLTimerType_ViewController 开始");
-    [[JLTimer shared] addNewTaskWithOnceTime:1 handleBlock:^{
-        NSLog(@"Debug -- JLTimerType_ViewController 仅执行一次");
-    }];
+//    NSLog(@"Debug -- JLTimerType_ViewController 开始");
+//
+//    [[JLTimer shared] addNewTaskWithOnceTime:1 handleBlock:^{
+//        NSLog(@"Debug -- JLTimerType_ViewController 仅执行一次");
+//    }];
+//    NSTimer *normalTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:NO];
+//
+//    NSLog(@"Debug -- NormalTimer 开始");
     
-    
-    NSLog(@"Debug -- NormalTimer 开始");
-    NSTimer *normalTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:NO];
 
    
 

@@ -36,7 +36,8 @@
     [self.tabV registerClass:[ShoppingCartTableViewCell class] forCellReuseIdentifier:@"ShoppingCartTableViewCell"];
     
     
-    self.dataArr = @[@8,@18,@28,@22,@16];
+    self.dataArr = @[@8,@18,@28,@22,@16,@8,@18,@28,@22,@16];
+//    self.dataArr = @[@8];
     [self.tabV reloadData];
     
 
@@ -63,11 +64,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ShoppingVC *vc = [[ShoppingVC alloc] init];
     ShoppingCartTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.eventBlock = ^{
-      
-        NSLog(@"321");
-    };
-    vc.eventBlock = cell.eventBlock;
+    vc.timerID = cell.timerID;
     [self.navigationController pushViewController:vc animated:true];
 }
 

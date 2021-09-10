@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSInteger countDown;
 //流水ID
 @property (nonatomic,assign) NSInteger serialID;
-
 //要执行的动作
 @property (nonatomic,copy) void(^eventBlock)(void);
 

@@ -6,6 +6,7 @@
 //
 
 #import "ShoppingVC.h"
+#import "JLTimer.h"
 
 @interface ShoppingVC ()
 
@@ -18,12 +19,21 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.eventBlock = ^{
-      
-        NSLog(@"123");
-    };
+
+    
+    [[JLTimer shared] addNewObserver:^{
+            NSLog(@"123");
+    } with:self.timerID];
 }
 
+//- (void (^)(void))eventBlock{
+//    if (!_eventBlock) {
+//        _eventBlock = ^{
+//            NSLog(@"123");
+//        };
+//    }
+//    return _eventBlock;
+//}
 /*
 #pragma mark - Navigation
 

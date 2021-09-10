@@ -13,6 +13,9 @@
 @property (nonatomic,strong) UILabel *timeLab;
 @property (nonatomic,assign) NSInteger timeNum;
 
+
+@property (nonatomic,strong) NSTimer *normalTimer;
+
 @end
 
 @implementation ShoppingCartTableViewCell
@@ -28,24 +31,42 @@
 - (void)uiBuild{
     [self.contentView addSubview:self.timeLab];
     self.timeLab.frame = CGRectMake(20, 0, 150, 66);
-
+    
 }
 
 - (void)setTimeCount:(NSInteger)timeCount{
     _timeCount = timeCount;
     self.timeNum = timeCount;
     self.timeLab.text = [NSString stringWithFormat:@"还有%ld秒结束抢购",(long)self.timeNum];
-    
-    self.eventBlock = [[JLTimer shared] addCountDownTaskWithTime:timeCount handleBlock:^{
+
+    self.timerID = [[JLTimer shared] addCountDownTaskWithTime:timeCount handleBlock:^{
         self.timeNum--;
-        
         if (self.timeNum == 0){
             self.timeLab.text = @"抢购已结束";
         }else{
             self.timeLab.text = [NSString stringWithFormat:@"还有%ld秒结束抢购",(long)self.timeNum];
         }
     }];
+    NSLog(@"uuid -- %@",self.timerID);
+    
+    
+    
+//   self.normalTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(runNormalTimer) userInfo:nil repeats:true];
 }
+
+- (void)runNormalTimer{
+    self.timeNum--;
+    if (self.timeNum == 0){
+        self.timeLab.text = @"抢购已结束";
+        
+        [self.normalTimer invalidate];
+        self.normalTimer = nil;
+        
+    }else{
+        self.timeLab.text = [NSString stringWithFormat:@"还有%ld秒结束抢购",(long)self.timeNum];
+    }
+}
+
 
 
 - (UILabel *)timeLab{

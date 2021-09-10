@@ -130,8 +130,6 @@
 			children = (
 				527226E626E7062600A0B5F6 /* Main */,
 				52709C2426CA11C6007E9B6D /* JLTimer */,
-				52709BF526CA11B1007E9B6D /* ViewController.h */,
-				52709BF626CA11B1007E9B6D /* ViewController.m */,
 				527226E726E7482900A0B5F6 /* Module */,
 				52709C2E26CA572B007E9B6D /* ClockView.h */,
 				52709C2F26CA572B007E9B6D /* ClockView.m */,
@@ -191,6 +189,8 @@
 		527226E726E7482900A0B5F6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				52709BF526CA11B1007E9B6D /* ViewController.h */,
+				52709BF626CA11B1007E9B6D /* ViewController.m */,
 				527226E826E7485400A0B5F6 /* ShoppingCart */,
 			);
 			path = Module;

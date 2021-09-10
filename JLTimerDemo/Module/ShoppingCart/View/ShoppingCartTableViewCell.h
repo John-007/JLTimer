@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,assign) NSInteger timeCount;
 @property (nonatomic,copy) void (^eventBlock)(void);
+@property (nonatomic,strong) NSString *timerID;
 
 @end
 
