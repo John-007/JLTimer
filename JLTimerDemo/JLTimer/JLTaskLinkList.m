@@ -7,6 +7,23 @@
 
 #import "JLTaskLinkList.h"
 
+
+@implementation JLTimerModel
+
+- (instancetype)initWithTimerNum:(NSUInteger)time isRepeat:(BOOL)isRepeat type:(JLTimerType)type handleBlock:(void (^)(void))handle {
+    self = [super init];
+    if (self) {
+        self.timeCount = time;
+        self.isRepeat = isRepeat;
+        self.type = type;
+        self.eventBlock = handle;
+    }
+    return self;
+}
+
+@end
+
+
 @implementation JLTaskNode
 
 - (instancetype)initNodeWith:(JLTimerModel*)model andSerialID:(NSInteger)serialID{

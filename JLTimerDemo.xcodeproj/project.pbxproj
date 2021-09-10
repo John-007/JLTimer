@@ -16,7 +16,6 @@
 		52709C0226CA11B2007E9B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C0126CA11B2007E9B6D /* main.m */; };
 		52709C0C26CA11B2007E9B6D /* JLTimerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C0B26CA11B2007E9B6D /* JLTimerDemoTests.m */; };
 		52709C1726CA11B2007E9B6D /* JLTimerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C1626CA11B2007E9B6D /* JLTimerDemoUITests.m */; };
-		52709C2926CA11C6007E9B6D /* JLTimerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2526CA11C6007E9B6D /* JLTimerModel.m */; };
 		52709C2A26CA11C6007E9B6D /* JLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52709C2826CA11C6007E9B6D /* JLTimer.m */; };
 		527226E526E5BE0300A0B5F6 /* JLTaskLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */; };
 		527226EB26E748A100A0B5F6 /* ShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 527226EA26E748A100A0B5F6 /* ShoppingCartVC.m */; };
@@ -60,9 +59,7 @@
 		52709C1226CA11B2007E9B6D /* JLTimerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLTimerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52709C1626CA11B2007E9B6D /* JLTimerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTimerDemoUITests.m; sourceTree = "<group>"; };
 		52709C1826CA11B2007E9B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52709C2526CA11C6007E9B6D /* JLTimerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTimerModel.m; sourceTree = "<group>"; };
 		52709C2626CA11C6007E9B6D /* JLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTimer.h; sourceTree = "<group>"; };
-		52709C2726CA11C6007E9B6D /* JLTimerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTimerModel.h; sourceTree = "<group>"; };
 		52709C2826CA11C6007E9B6D /* JLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTimer.m; sourceTree = "<group>"; };
 		527226E326E5BE0300A0B5F6 /* JLTaskLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTaskLinkList.h; sourceTree = "<group>"; };
 		527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTaskLinkList.m; sourceTree = "<group>"; };
@@ -157,8 +154,6 @@
 			children = (
 				52709C2626CA11C6007E9B6D /* JLTimer.h */,
 				52709C2826CA11C6007E9B6D /* JLTimer.m */,
-				52709C2726CA11C6007E9B6D /* JLTimerModel.h */,
-				52709C2526CA11C6007E9B6D /* JLTimerModel.m */,
 				527226E326E5BE0300A0B5F6 /* JLTaskLinkList.h */,
 				527226E426E5BE0300A0B5F6 /* JLTaskLinkList.m */,
 			);
@@ -341,7 +336,6 @@
 				52709BF726CA11B1007E9B6D /* ViewController.m in Sources */,
 				527226F526E76D0E00A0B5F6 /* ShoppingVC.m in Sources */,
 				52709BF126CA11B1007E9B6D /* AppDelegate.m in Sources */,
-				52709C2926CA11C6007E9B6D /* JLTimerModel.m in Sources */,
 				527226EF26E74A8000A0B5F6 /* ShoppingCartTableViewCell.m in Sources */,
 				52709C0226CA11B2007E9B6D /* main.m in Sources */,
 				52709BF426CA11B1007E9B6D /* SceneDelegate.m in Sources */,

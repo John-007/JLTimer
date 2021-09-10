@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //此处添加自定义的timerGroup，用于批量管理Timer
 typedef enum : NSUInteger {
-    JLTimerGroup_A,
-    JLTimerGroup_B
+    JLTimerGroup_ShoppingCart,
+    JLTimerGroup_A
 } JLTimerGroup;
 
 
